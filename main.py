@@ -3,10 +3,7 @@ word_list = words.words()
 
 from wordfreq import word_frequency
 
-# prints 236736
-
 fiveLetterWords = []
-
 
 for i in range(0, len(word_list)):
     if len(word_list[i]) == 5:
@@ -18,14 +15,10 @@ for i in range(0, len(fiveLetterWords)):
     fiveLetterWords[i] = fiveLetterWords[i].lower()
     wordsFreq[i] = word_frequency(fiveLetterWords[i], 'en')
 
-
-
 yellow = []
 yellowIndex = []
-
 green = []
 greenIndex = []
-
 black = []
 
 maxIndex = 0
@@ -33,7 +26,6 @@ maxIndex = 0
 for i in range(0, len(fiveLetterWords)):
     if wordsFreq[i] > wordsFreq[maxIndex]:
         maxIndex = i
-
 
 #print(wordsFreq[maxIndex])
 
@@ -100,4 +92,3 @@ for i in range(0,14):
     print(guess)
 
     guesses.append(guess)
-
